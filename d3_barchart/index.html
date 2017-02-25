@@ -4,8 +4,7 @@ Using d3-tip to add tooltips to a d3 bar chart.
 <style>
 
 body {
-  font: 10px sans-serif;
-}
+  font: 10px sans-serif; }
 
 .axis path,
 .axis line {
@@ -56,21 +55,21 @@ body {
 }
 </style>
 <body>
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="tips.js"></script>
 <p id="files"></p>
 <script>
 
-var margin = {top: 40, right: 20, bottom: 30, left: 40},
+var margin = {top: 40, right: 20, bottom: 40, left: 80},
     width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    height = 600 - margin.top - margin.bottom;
 
-var formatPercent = d3.format(".0%");
+var formatPercent = d3.format(",0f");
 
 var x = d3.scale.ordinal()
-    .rangeRoundBands([0, width], .1);
+    .rangeRoundBands([0, width], .5);
 
-var y = d3.scale.linear()
+var y = d3.scale.log()
     .range([height, 0]);
 
 var xAxis = d3.svg.axis()
@@ -87,10 +86,11 @@ var tip = d3.tip()
   .offset([-10, 0])
   .html(function(d) {
       var files = document.getElementById("files").innerHTML = d.files.join("</br>");
-    return "<strong>Cost:</strong> <span style='color:red'>" + d.cost+ "</span>";
+      return "<strong>Cost:</strong> <span style='color:red'>" + d.cost+ "</br></span>"
+          + "<strong>Files:</strong> <span stype='color:green'>"+ d.files.length + "</span>";
   })
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("body").insert("svg", before=":first-child")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
@@ -98,26 +98,32 @@ var svg = d3.select("body").append("svg")
 
 svg.call(tip);
 
-d3.json("keystats.json", function(error, data) {
+d3.json("docker.json", function(error, data) {
 
 
     x.domain(data.map(function(d, x) { return d.pos; }));
-    y.domain([0, d3.max(data, function(d) { return d.files.length; })])
+    y.domain([1, d3.max(data, function(d) { return d.files.length; })])
+
+    var ticks = x.domain().filter(function(d, i) { return !(i % 50)});
+    xAxis.tickValues(ticks);
   
     svg.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + height + ")")
-        .call(xAxis);
+        .call(xAxis)
+        .append("text")
+            .attr("y", 40)
+            .text("Blob lifespan");
   
     svg.append("g")
         .attr("class", "y axis")
         .call(yAxis)
       .append("text")
         .attr("transform", "rotate(-90)")
-        .attr("y", 6)
+        .attr("y", -50)
         .attr("dy", ".71em")
         .style("text-anchor", "end")
-        .text("Frequency");
+        .text("Blob Count");
   
     svg.selectAll(".bar")
         .data(data)
@@ -126,9 +132,14 @@ d3.json("keystats.json", function(error, data) {
         .attr("x", function(d) { return x(d.pos); })
         .attr("width", x.rangeBand())
         .attr("y", function(d) { return y(d.files.length); })
-        .attr("height", function(d) { return height - y(d.files.length); })
+        .attr("height", function(d) { return height-y(d.files.length); })
         .on('mouseover', tip.show)
         .on('mouseout', tip.hide)
+        .style("fill", function (d, i) { //d is the data bound to the svg element
+               //Used opacity here but anything can be changed
+            console.log(d.pos);
+            return d.pos > 365.0 ? "green" : "red"; 
+        });
   
 });
 
