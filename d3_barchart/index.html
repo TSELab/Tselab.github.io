@@ -143,7 +143,7 @@ d3.json(dataset, function(error, data) {
     x.domain(data.map(function(d, x) { return Math.floor(d.pos); }));
     y.domain([1, d3.max(data, function(d) { return d.files.length; })]);
 
-    var ticks = x.domain().filter(function(d, i) { return !(i % 50)});
+    var ticks = x.domain().filter(function(d, i) { return !(i % Math.floor(data.length/20))});
     xAxis.tickValues(ticks);
   
     svg.append("g")
