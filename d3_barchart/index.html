@@ -63,10 +63,14 @@ body {
 <table>
 <tr id="content">
     <td>
-    <p id="files"></p>
+    <div id="files"></p>
     </td>
 </tr>
+<tr>
+    <input id="searchbox">
+    </input>
 </table>
+
 <script>
 
 var margin = {top: 40, right: 20, bottom: 45, left: 100},
@@ -96,11 +100,30 @@ var tip = d3.tip()
   .attr('class', 'd3-tip')
   .offset([-10, 0])
   .html(function(d) {
-      var files = document.getElementById("files").innerHTML = d.files.join("</br>");
       return "<strong>Cost:</strong> <span style='color:red'>" + new Intl.NumberFormat('en-US', 
               { maximumSignificantDigits: 3 }).format(d.cost) + "</br></span>"
           + "<strong>Files:</strong> <span stype='color:green'>"+ d.files.length + "</span>";
   })
+
+var showFiles = function(d) {
+    var files = d.files.filter(function (value, index, self) {return self.indexOf(value) == index});
+    document.getElementById("files").innerHTML = files.sort().join("</br>");
+}
+
+
+var highlightBars = function(d) {
+    var text = new RegExp(document.getElementById("searchbox").value);
+    console.log(text);
+    
+    var findFileByRegex = function (acc, val) {
+        return acc | text.test(val);
+    }
+
+    svg.selectAll(".bar")
+        .style("fill", function (d, i) {
+            return d.files.reduce(findFileByRegex) ? "green" : "gray";
+        });
+}
 
 var svg = d3.select("#content").insert("svg", before=":first-child")
     .attr("width", width + margin.left + margin.right)
@@ -110,7 +133,12 @@ var svg = d3.select("#content").insert("svg", before=":first-child")
 
 svg.call(tip);
 
-d3.json("docker.json", function(error, data) {
+dataset = location.search.split("?dataset=")[1]
+
+if (dataset == undefined)
+    dataset = "docker.json"
+
+d3.json(dataset, function(error, data) {
 
     x.domain(data.map(function(d, x) { return Math.floor(d.pos); }));
     y.domain([1, d3.max(data, function(d) { return d.files.length; })]);
@@ -146,12 +174,22 @@ d3.json("docker.json", function(error, data) {
         .attr("height", function(d) { return height-y(d.files.length); })
         .on('mouseover', tip.show)
         .on('mouseout', tip.hide)
+        .on('click', showFiles)
         .style("fill", function (d, i) { 
             var red = Math.floor((i/data.length)*256);
-            color = "rgb(" + red + "," + Math.floor(128 - red/2) + ",43)";
+            //color = "rgb(" + red + "," + Math.floor(128 - red/2) + ",43)";
+            color = "rgb(" + red + ",80,80)";
             return color;
         });
-  
+
+    svg.append("text")
+        .attr("x", (width / 2))             
+        .attr("y", 0)
+        .attr("text-anchor", "middle")  
+        .style("font-size", "24px") 
+        .text("Blob statistics for " + dataset.split(".")[0]);
+
+    d3.select("#searchbox").on('keyup', highlightBars);
 });
 
 </script>
