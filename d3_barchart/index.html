@@ -59,31 +59,40 @@ body {
   top: 100%;
   left: 0;
 }
+
+/* classes modified from http://jsfiddle.net/c6242/1/ */
+.parent-container {
+    width:100%;
+    /*border:1px solid red;*/
+    float:left;
+}
+.child-container {
+    /*border:1px solid blue;*/
+    float:left;
+}
+
 </style>
 <body>
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script src="tips.js"></script>
 
-<table>
-<tr id="content">
-    <td>
-        <div class="label">
-            Files for this timelapse
-        </div>
-    <div id="files"> (click on a bar to populate)</p>
-    </td>
-</tr>
-</table>
-<div class="label">
-Filter files (accepts regexes): <input id="searchbox"/>
+<div style="margin:0 auto; text-align:center;" class="search-span">
+  <input id="searchbox" type="search" placeholder="Find a file (accepts regexes i.e. \.sh$)" style="-webkit-appearance:none; height:30px; width:500px; font-size:17px"/>
 </div>
-<button id="reset-search">Reset Search</button>
+
+<div class="parent-container">
+  <div id="content" class="child-container" style="width: 80%;"></div>
+  <div class="child-container" style="width: 19%;">
+    <h3>Files for this timelapse</h3>
+    <p id="files">click on a bar to list the files for that blob</p>
+  </div>
+</div>
 
 <script>
-
+var w = document.getElementById('content').offsetWidth;
 
 var margin = {top: 40, right: 20, bottom: 45, left: 100},
-    width = 1200 - margin.left - margin.right,
+    width = w - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom;
 
 var formatY = d3.format(",0f");
@@ -128,6 +137,7 @@ var resetSearch = function(d) {
             return color;
         });
 }
+document.getElementById('searchbox').onsearch = resetSearch;
 
 var highlightBars = function(d) {
     var text = new RegExp(document.getElementById("searchbox").value);
