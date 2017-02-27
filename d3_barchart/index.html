@@ -1,20 +1,22 @@
-Using d3-tip to add tooltips to a d3 bar chart.
 <!DOCTYPE html>
 <meta charset="utf-8">
 <style>
 
 body {
-  font: 10px sans-serif; }
+  font: 10px sans-serif; 
+}
+
+#files {
+  display: inline;
+  max-height: 600px;
+  overflow-y: scroll;
+}
 
 .axis path,
 .axis line {
   fill: none;
   stroke: #000;
   shape-rendering: crispEdges;
-}
-
-.bar {
-  fill: orange;
 }
 
 .bar:hover {
@@ -57,40 +59,50 @@ body {
 <body>
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script src="tips.js"></script>
-<p id="files"></p>
+
+<table>
+<tr id="content">
+    <td>
+    <p id="files"></p>
+    </td>
+</tr>
+</table>
 <script>
 
-var margin = {top: 40, right: 20, bottom: 40, left: 80},
-    width = 960 - margin.left - margin.right,
+var margin = {top: 40, right: 20, bottom: 45, left: 100},
+    width = 1200 - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom;
 
-var formatPercent = d3.format(",0f");
+var formatY = d3.format(",0f");
+var formatX = d3.format(",.0f");
 
 var x = d3.scale.ordinal()
-    .rangeRoundBands([0, width], .5);
+    .rangeBands([0, width]);
 
 var y = d3.scale.log()
     .range([height, 0]);
 
 var xAxis = d3.svg.axis()
     .scale(x)
-    .orient("bottom");
+    .orient("bottom")
+    .tickFormat(formatX);
 
 var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left")
-    .tickFormat(formatPercent);
+    .ticks(10, formatY);
 
 var tip = d3.tip()
   .attr('class', 'd3-tip')
   .offset([-10, 0])
   .html(function(d) {
       var files = document.getElementById("files").innerHTML = d.files.join("</br>");
-      return "<strong>Cost:</strong> <span style='color:red'>" + d.cost+ "</br></span>"
+      return "<strong>Cost:</strong> <span style='color:red'>" + new Intl.NumberFormat('en-US', 
+              { maximumSignificantDigits: 3 }).format(d.cost) + "</br></span>"
           + "<strong>Files:</strong> <span stype='color:green'>"+ d.files.length + "</span>";
   })
 
-var svg = d3.select("body").insert("svg", before=":first-child")
+var svg = d3.select("#content").insert("svg", before=":first-child")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
@@ -100,9 +112,8 @@ svg.call(tip);
 
 d3.json("docker.json", function(error, data) {
 
-
-    x.domain(data.map(function(d, x) { return d.pos; }));
-    y.domain([1, d3.max(data, function(d) { return d.files.length; })])
+    x.domain(data.map(function(d, x) { return Math.floor(d.pos); }));
+    y.domain([1, d3.max(data, function(d) { return d.files.length; })]);
 
     var ticks = x.domain().filter(function(d, i) { return !(i % 50)});
     xAxis.tickValues(ticks);
@@ -113,7 +124,7 @@ d3.json("docker.json", function(error, data) {
         .call(xAxis)
         .append("text")
             .attr("y", 40)
-            .text("Blob lifespan");
+            .text("Blob lifespan (days)");
   
     svg.append("g")
         .attr("class", "y axis")
@@ -121,7 +132,7 @@ d3.json("docker.json", function(error, data) {
       .append("text")
         .attr("transform", "rotate(-90)")
         .attr("y", -50)
-        .attr("dy", ".71em")
+        .attr("dy", "-10")
         .style("text-anchor", "end")
         .text("Blob Count");
   
@@ -129,25 +140,18 @@ d3.json("docker.json", function(error, data) {
         .data(data)
       .enter().append("rect")
         .attr("class", "bar")
-        .attr("x", function(d) { return x(d.pos); })
-        .attr("width", x.rangeBand())
+        .attr("x", function(d) { return x(Math.floor(d.pos)); })
+        .attr("width", x.rangeBand()- .5)
         .attr("y", function(d) { return y(d.files.length); })
         .attr("height", function(d) { return height-y(d.files.length); })
         .on('mouseover', tip.show)
         .on('mouseout', tip.hide)
-        .style("fill", function (d, i) { //d is the data bound to the svg element
-               //Used opacity here but anything can be changed
-            console.log(d.pos);
-            return d.pos > 365.0 ? "green" : "red"; 
+        .style("fill", function (d, i) { 
+            var red = Math.floor((i/data.length)*256);
+            color = "rgb(" + red + "," + Math.floor(128 - red/2) + ",43)";
+            return color;
         });
   
 });
-
-/*
-function type(d) {
-  d.frequency = +d.frequency;
-  return d;
-}
-*/
 
 </script>
