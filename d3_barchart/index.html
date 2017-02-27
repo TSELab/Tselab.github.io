@@ -7,9 +7,13 @@ body {
 }
 
 #files {
-  display: inline;
   max-height: 600px;
   overflow-y: scroll;
+  min-height: 600px;
+}
+
+.label {
+  font: 16px bold sans-serif;
 }
 
 .axis path,
@@ -63,14 +67,16 @@ body {
 <table>
 <tr id="content">
     <td>
-    <div id="files"></p>
+        <div class="label">
+            Files for this timelapse
+        </div>
+    <div id="files"> (click on a bar to populate)</p>
     </td>
 </tr>
-<tr>
-    <input id="searchbox">
-    </input>
 </table>
-
+<div class="label">
+Filter files (accepts regexes): <input id="searchbox"/>
+</div>
 <script>
 
 var margin = {top: 40, right: 20, bottom: 45, left: 100},
@@ -113,7 +119,6 @@ var showFiles = function(d) {
 
 var highlightBars = function(d) {
     var text = new RegExp(document.getElementById("searchbox").value);
-    console.log(text);
     
     var findFileByRegex = function (acc, val) {
         return acc | text.test(val);
