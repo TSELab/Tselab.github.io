@@ -1,0 +1,64 @@
+<header class="site-header" role="banner">
+
+  <div class="wrapper">
+    {%- assign default_paths = site.pages | map: "path" -%}
+    {%- assign page_paths = site.header_pages | default: default_paths -%}
+    <div class="header-left">
+        <h1 class="site-title">
+            <a rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}
+            </a>
+        </h1>
+        <h2 class='site-spiel'>
+            <a href="/projects">Open source</a> |
+            <a href="/publications">Research</a> |
+            <a href="/blog">Security</a>
+        </h2>
+    </div>
+  </div>
+    {%- if page_paths -%}
+  <div class='wrapper'>
+      <nav>
+        <div class='container-menu'>
+            <ul id='menu-default' class='menu'>
+                <li class='menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children'>
+                    <a class="page-link" href="/about/">about</a>
+                </li>
+               <li class='menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children'>
+                    <a class="page-link" href="/projects/">projects</a>
+                </li>
+               <li class='menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children'>
+                    <a class="page-link" href="/publications/">publications</a>
+                </li>
+               <li class='menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children'>
+                    <a class="page-link" href="/blog/">blog</a>
+                </li>
+            </ul>
+        </div>
+      </nav>
+    {%- endif -%}
+  </div>
+  <div class="openresponsivemenu">
+    <div class='responsivemenu'>
+        
+        <input type="checkbox" id="toggle-1">
+        <label for='toggle-1'>
+<img class='responsive-drawer' src='/assets/images/drawer.png'/>
+</label>
+        <ul id='menu-default' class='menu'>
+            <li>
+                <a class="page-link" href="/about/">about</a>
+            </li>
+           <li>
+                <a class="page-link" href="/projects/">projects</a>
+            </li>
+           <li>
+                <a class="page-link" href="/publications/">publications</a>
+            </li>
+           <li>
+                <a class="page-link" href="/blog/">blog</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+</header>

@@ -1,0 +1,23 @@
+.subheader-color {
+    background: url("../images/subheader-color-background.png");
+}
+
+.our-lawyers .widget-our-lawyers-mask {
+    display: none;
+}
+
+.widget-our-lawyers .widget-our-lawyers-mask {
+    display: none;
+}
+
+#subheader .subheader-color .header-form .wpcf7-text {
+    line-height: 42px;
+}
+
+#footer .footer-box .wpcf7-text {
+    line-height: 38px;
+}
+
+#lawyers-post-type .lawyers-posts article .lawyers-posts-image {
+    background-position: center;
+}
