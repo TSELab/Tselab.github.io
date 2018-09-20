@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 <span style="display: inline-block;"> 
-I’m a second-year PhD Student at NYU’s Center for Cyber Security (CCS) under
+I’m a third-year PhD Student at NYU’s Center for Cyber Security (CCS) under
 the guidance of Prof. Cappos. Throughout my career, my interests have ranged
 from binary analysis, cryptography, Operating Systems, and Security-oriented
 software engineering. My goal is to elucidate software solutions that improve
