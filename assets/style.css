@@ -109,11 +109,9 @@ html {
   font-size: 62.5%;
 }
 
+/* let's let the purdue style handle this color/draw
+ * with a slight tweak on the font size */
 body {
-  background: url("/assets/images/tile.png");
-  background-repeat: repeat;
-  color: #fff;
-  font-weight: 400;
   font-size: 14px;
 }
 
@@ -292,7 +290,6 @@ nav li a:visited {
 
 nav li a {
   padding: 5px 10px;
-  background-color: rgba(0, 0, 0, .75);;
   display: block;
   color: white;
   text-decoration: none;
@@ -305,7 +302,6 @@ nav li ul {
   top: 40px;
   display: none;
   position: absolute;
-  background-color: rgba(50, 50, 50, .75);
   opacity: .80;
   z-index: 99999;
   width: 200px;
@@ -339,11 +335,10 @@ nav li ul ul {
   top: 0;
   left: 100%;
 }
-/*
+
 nav li.current-menu-item a {
   color: parent;
 }
-*/
 
 /* Subheader */
 #subheader {
@@ -781,7 +776,6 @@ nav li.current-menu-item a {
   margin-top: 14px !important;
   padding-left: 3%;
   box-sizing: border-box;
-  color: #000;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;

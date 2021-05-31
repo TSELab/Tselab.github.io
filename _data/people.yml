@@ -1,0 +1,33 @@
+faculty:
+    - name: Santiago Torres-Arias
+      photo: me.png
+      title: Assistant Professor of ECE
+      website: https://badhomb.re
+    - name: Santiago Torres-Erias
+      photo: me.png
+      title: Assistant Professor of ECE
+      website: https://badhomb.re
+    - name: Santiago Torres-Irias
+      photo: me.png
+      title: Assistant Professor of ECE
+      website: https://badhomb.re
+    - name: Santiago Torres-Orias
+      photo: me.png
+      title: Assistant Professor of ECE
+      website: https://badhomb.re
+    - name: Santiago Torres-Urias
+      photo: me.png
+      title: Assistant Professor of ECE
+      website: https://badhomb.re
+
+students:
+    - name: Santiago Ayyyrias
+      photo: me.png
+      title: PhD Student
+      website: https://badhomb.re
+
+staff:
+    - name: Santiago Lmaoorias
+      photo: me.png
+      title: Resident Smartperson 
+      website: https://badhomb.re

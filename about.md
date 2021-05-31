@@ -1,36 +1,20 @@
 ---
 layout: page
-title: About Me
+title: About the TSE
 permalink: /about/
 ---
 
-<span style="display: inline-block;"> 
-I’m a third-year PhD Student at NYU’s Center for Cyber Security (CCS) under
-the guidance of Prof. Cappos. Throughout my career, my interests have ranged
-from binary analysis, cryptography, Operating Systems, and Security-oriented
-software engineering. My goal is to elucidate software solutions that improve
-security and privacy for all computer users.
-</span>
-<img style="display: inline-block; float:right;" src='/assets/me.png' class="img-responsive" alt='this should be my face :['/>
+The Trustworthy Software Ecosystems Lab at Purdue University's Electrical and
+Computer Engineering Department focuses on analysing and securing the
+ecosystems in which software is developed, packaged, tested and distributed to
+users. We believe that protecting the environment in which software is created
+is as fundamental as the intrinsic security of the software itself. As such, we
+focus on studying aspects such as:
 
-<p>
-My current research focuses on securing the software development life-cycle.
-Before that, my research focused on secure password storage mechanisms and
-update systems. Because of this, I’m the team lead of in-toto, a framework to
-secure the software development life-cycle, as well as PolyPasswordHasher, a
-password storage mechanism that’s incredibly resilient to offline password
-cracking. Also, I’m a contributor for The Update Framework (TUF), which is the
-software update system being integrated on a variety of projects like Docker,
-CPAN, and others.
-</p>
-
-In my free time, I like developing open source software, including mobile
-applications for education and a custom <a href="https://github.com/santiagotorres/bg_daemon">desktop-background daemon</a> that crawls
-Reddit/Imgur. I tend towards writing small, yet usable applications on my own
-and publishing them (usually as proofs of concept) on <a href="https://github.com/santiagotorres">GitHub</a>. I’m also a member
-of the <a href="https://wiki.archlinux.org/index.php/Arch_CVE_Monitoring_Team">Arch Linux Security Team</a>, and have contributed small patches to
-other medium to big-sized F/OSS projects. You can read more about the projects
-I contributed to in my project-list page.
-
-When I’m not coding, I enjoy playing Guitar (I like playing Progressive rock,
-Jazz and Math-rock) and reading pretty much about anything.
+- The software supply chain (from the version control system to the delivery
+  pipeline)
+- The certification ecosystem (from code signing certificates to peer-to-peer
+  authentication)
+- The eveloper identity and their community trust
+- The societal interactions between developers on open source and its efect on
+  code quality
