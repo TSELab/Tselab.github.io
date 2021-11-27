@@ -15,11 +15,12 @@ body {
 	margin: 0;
 	padding: 0;
 	border: 0;
+    color: #0b0b0b;
 	font-size: 100%;
 	vertical-align: baseline;
 	line-height: 1;
 	font-size: 14px;
-	background-color: $color-gray90;
+	background-color: #fff;
 }
 div span applet object iframe h1 h2 h3 h4 h5 h6 
   p blockquote pre a abbr accronym address big 
@@ -75,7 +76,7 @@ nav {
 			}
 			padding: 5px 10px;
 			display: block;
-			color: white;
+			color: $boiler-gold;
 			text-decoration: none;
 			border: 1px solid $boiler-gold;
 		}
@@ -172,13 +173,13 @@ img.aligncenter {
 	margin-right: auto;
 }
 .wrapper {
-	background-color: #000;
+	background-color: #fff;
 	width: 964px;
 	margin: 0px auto;
 }
 .wide-header {
 	width: 100%;
-	background-color: $color-moonDustGray;
+	background-color: #fff;
 	margin: 0px 0 5px 0;
 }
 .header-contact {
@@ -234,8 +235,7 @@ img.aligncenter {
 	margin: 25px 0px;
 	float: left;
 	.logo {
-		width: auto;
-		height: 60px;
+		width: 70%;
 		display: block;
 		float: left;
 		img {
@@ -275,14 +275,14 @@ img.aligncenter {
 			float: left;
 			h3 {
 				width: 100%;
-				color: white;
+				color: #0b0b0b;
 				line-height: 30px;
 				font-size: 24px;
 			}
 			p {
 				width: 100%;
 				margin-top: 13px;
-				color: white;
+				color: #0b0b0b;
 				line-height: 26px;
 				font-weight: 300;
 				font-size: 16px;
@@ -366,7 +366,7 @@ img.aligncenter {
 			width: 100%;
 			margin-top: 13px;
 			text-align: center;
-			color: #cbcbcb;
+			color: #0b0b0b;
 			font-weight: 700;
 			font-size: 30px;
 		}
@@ -374,7 +374,7 @@ img.aligncenter {
 			width: 100%;
 			margin-top: 13px;
 			text-align: center;
-			color: #cbcbcb;
+			color: #0b0b0b;
 			font-weight: 300;
 			font-size: 18px;
 		}
@@ -622,7 +622,7 @@ img.aligncenter {
 	width: 740px;
 	float: left;
 	background-color: rgba(0, 0, 0, .0);
-	color: #cbcbcb;
+	color: #0b0b0b;
 	padding: 10px;
 	form.post-password-form {
 		width: 100%;
@@ -632,7 +632,7 @@ img.aligncenter {
 			height: 30px;
 			margin: 10px 0px 0px;
 			padding: 0px 5px;
-			color: #cbcbcb;
+			color: #0b0b0b;
 			border: 1px solid #CECECE;
 			box-sizing: border-box;
 			-moz-box-sizing: border-box;
@@ -714,7 +714,7 @@ img.aligncenter {
 	.post-meta {
 		width: 100%;
 		margin-bottom: 30px;
-		color: #cbcbcb;
+		color: #0b0b0b;
 		font-size: 12px;
 		a {
 			line-height: 24px;
@@ -739,7 +739,7 @@ img.aligncenter {
 	.post-excerpt {
 		width: 100%;
 		line-height: 24px;
-		color: #cbcbcb;
+		color: #0b0b0b;
 		word-break: break-word;
 		img {
 			max-width: 100%;
@@ -1006,14 +1006,14 @@ img.aligncenter {
 }
 .site-title {
 	a {
-		color: #cbcbcb;
+		color: #0b0b0b;
 		text-decoration: none;
 		font-size: 30px;
 		font-weight: bold;
 	}
 }
 .site-description {
-	color: #cbcbcb;
+	color: #0b0b0b;
 	font-size: 15px;
 	line-height: 20px;
 }

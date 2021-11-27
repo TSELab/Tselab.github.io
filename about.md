@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About the TSE
+title: About the TSEL
 permalink: /about/
 ---
 
@@ -15,6 +15,6 @@ focus on studying aspects such as:
   pipeline)
 - The certification ecosystem (from code signing certificates to peer-to-peer
   authentication)
-- The eveloper identity and their community trust
+- The developer identity and their community trust
 - The societal interactions between developers on open source and its efect on
   code quality
