@@ -1,0 +1,54 @@
+/* screen - 404-error-page */
+
+.x404-error-page {
+  align-items: center;
+  background-image: url(../img/vector-1@1x.svg);
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  height: 1144px;
+  overflow: hidden;
+  width: 1920px;
+}
+
+.x404-error-page .header-404 {
+  height: 95px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 1922px;
+  z-index: 3;
+}
+
+.x404-error-page .overlap-group {
+  height: 71px;
+  margin-right: 812.0px;
+  margin-top: 162px;
+  position: relative;
+  width: 276px;
+  z-index: 1;
+}
+
+.x404-error-page .rectngulo-negro-404 {
+  cursor: pointer;
+  height: 71px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 276px;
+}
+
+.x404-error-page .back-to-home {
+  left: 60px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 20px;
+}
+
+.x404-error-page .ilustracin-404 {
+  height: 635px;
+  margin-right: 0.99px;
+  margin-top: 85px;
+  width: 958px;
+  z-index: 2;
+}

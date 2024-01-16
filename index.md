@@ -1,13 +1,29 @@
 ---
-layout: home
+layout: none 
 title: Trustworthy Software Ecosystems (TSE) Lab.
 ---
 
-The Trustworthy Software Ecosystems lab at Purdue's Electrical and Computer
-Engineering department focuses on analysing and protecting the various ways
-that people create and consume software. To do so, we create systems such as
-in-toto to protect the software supply chain, develop new techniques to analyse
-software in the wild, and measure the software ecosystems and how they evolve.
-
-> If you're a prospective Purdue student and are interested in working in the
-> TSE, please reach out to [Santiago Torres-Arias](https://badhomb.re) about it!
+<!DOCTYPE html>
+<html>
+ 
+  {%- include head.html -%}
+  <body style="margin: 0">
+    <input type="hidden" id="anPageName" name="page" value="tslab" />
+    <div class="container-center-horizontal screen">
+      <div class="tslab">
+        {%- include header.html -%}
+        <div class="home-card">
+            <img class="home-transparency" id="transparencia-portada" src="assets/img/transparencia-portada@1x.svg" />
+            <div class="text-25">
+              To do so, we create systems such as in-toto to protect the software supply chain, develop new techniques
+              to analyse software in the wild, and measure the software ecosystems and how they evolve.
+            </div>
+            <div class="text-26">
+              The Trustworthy Software Ecosystems lab at Purdue’s Electrical and Computer Engineering department focuses
+              on analysing and protecting
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,11 +1,35 @@
 ---
-layout: page
+layout: none 
 title: Talks
-permalink: /talks/
+permalink: /talks-and-media/
 ---
-
-- “Software Supply Chain Security" JenkinsWorld & DevOps World '19.
-- “Open Source Summit: Security" DockerCon '19 [link](https://www.youtube.com/watch?v=ZIncgXrNnd8O).
-- “Deep Dive: SAFE BoF" (demo) KubeCon & Cloud-Native Con '18 [link](https://www.youtube.com/watch?v=VSoPHK6BVMU)
-- “Securing the Software Supply Chain with TUF and Docker” DockerCon '17 [link](https://www.youtube.com/watch?v=SNge7-t4JRE)
-- “PolyPasswordHasher: No Password Left Behind” Army Cyber Institute Cyber Talks '15 [link](https://www.youtube.com/watch?v=sCBgn0-JY8Q&t=10s)
+<html>
+  {%- include head.html -%}
+  <body style="margin: 0">
+    <input type="hidden" id="anPageName" name="page" value="tslab" />
+    <div class="container-center-horizontal">
+      <div class="tslab screen">
+        {%- include header.html -%}
+        <div class="overlap-group15">
+          <div class="overlap-group8">
+            <div class="transparencia-titulo" id="transparencia-projects"/>    
+                <h1 class="title roboto-normal-white-70px">Talks & Media</h1>
+            </div>
+          </div>
+        </div>
+        <div class="talks-and-media-2">
+        
+        {% for talk in site.data.talks%} 
+          <div class="overlap-group">
+            <img class="rectngulo-negro" src="/assets/img/rect-ngulo-negro-2-f@1x.svg" />
+            <img class="rectangulo-caf" src="/assets/img/rectangulo-caf--2-f@2x.svg" />
+            <a href="{{ talk.url }}">
+                <div class="docker-con-1 roboto-normal-white-18px">{{ talk.title}} </div>  
+            </a>
+            <div class="text-8 roboto-bold-dove-gray-20px-2">“{{ talk.venue}}”</div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>

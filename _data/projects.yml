@@ -1,0 +1,8 @@
+- name: Sigstore
+  description: "A new standard for signing, verifying and protecting software. Sigstore is an ecosystem of tools that allows for recording, discovery and authentication of software supply chain trust information. Through a combination of transparent logs and user tooling, parties can share temporally-aware information about software supply chain actions that pertain to an individual product or multiple products."
+  link: https://sigstore.dev/
+  image: sigstore@1x.png
+- name: in-toto
+  description: "Cryptographically-verifiable supply chain security framework. In-toto is a framework that allows actors within the software supply chain to communicate their actions in a cryptographically verifiable fashion. Through in-toto, software consumers are able to identify the actions performed in the supply chain and compare them against a policy provided by an authoritative source. This policy language and the evidence capture tooling is expressive enough to represent most software supply chains, and can detect attempts to tamper with the integrity of the chain itself."
+  link: https://in-toto.io
+  image: in-toto@2x.png

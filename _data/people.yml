@@ -1,30 +1,26 @@
 faculty:
     - name: Santiago Torres-Arias
       photo: me.png
-      title: Assistant Professor of ECE
+      position: Assistant Professor of ECE
       website: https://badhomb.re
-    - name: Santiago Torres-Erias
-      photo: me.png
-      title: Assistant Professor of ECE
-      website: https://badhomb.re
-    - name: Santiago Torres-Irias
-      photo: me.png
-      title: Assistant Professor of ECE
-      website: https://badhomb.re
-    - name: Santiago Torres-Orias
-      photo: me.png
-      title: Assistant Professor of ECE
-      website: https://badhomb.re
-    - name: Santiago Torres-Urias
-      photo: me.png
-      title: Assistant Professor of ECE
-      website: https://badhomb.re
+      interests: "Software Supply Chain Security, IoT Security, Privacy and Anonimity"
 
 students:
-    - name: Santiago Ayyyrias
-      photo: me.png
+
+    - name: Eman Abu Ishgair 
+      photo: eman.jpg
+      position: PhD Student
+      website: "" 
+      interests: "Supply Chain Transparency"
+    - name: Chinenye Okafor
+      photo: chinenye.jpg
+      position: PhD Student
+      website: "" 
+      interests: "..."
+    - name: Abhishek Reddypale 
+      photo: placeholder.png
       title: PhD Student
-      website: https://badhomb.re
+      website: ""
 
 staff:
     - name: Santiago Lmaoorias

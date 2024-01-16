@@ -1,0 +1,14 @@
+conference:
+    - title: "Sigstore: software signing for everybody"
+      info: "Z. Newman, JS. Meyers, S. Torres-Arias. Proceedings of the 2022 ACM SIGSAC Conference on Computer and Communications Security (CCS '22) Los Angeles, CA, 2022."
+    - title: "in-toto: providing farm-to-table security guarantees for bits and bytes."
+      info:  "S. Torres-Arias, H. Afzali, T. K. Kuppusamy, R. Curtmola, J. Cappos. 28th USENIX Security Symposium (USENIX Security ‘19) Santa Clara, CA 2019."
+
+
+journal:
+    - title: "in-toto: providing farm-to-table security guarantees for bits and bytes."
+      info:  "S. Torres-Arias, H. Afzali, T. K. Kuppusamy, R. Curtmola, J. Cappos. 28th USENIX Security Symposium (USENIX Security ‘19) Santa Clara, CA 2019."
+
+other:
+    - title: "in-toto: providing farm-to-table security guarantees for bits and bytes."
+      info:  "S. Torres-Arias, H. Afzali, T. K. Kuppusamy, R. Curtmola, J. Cappos. 28th USENIX Security Symposium (USENIX Security ‘19) Santa Clara, CA 2019."

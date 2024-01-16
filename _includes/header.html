@@ -1,76 +1,11 @@
-<header class="site-header" role="banner">
-
-  <div class="wrapper">
-    {%- assign default_paths = site.pages | map: "path" -%}
-    {%- assign page_paths = site.header_pages | default: default_paths -%}
-    <div class="header-left">
-        <h1 class="site-title">
-            <a rel="author" href="{{ "/" | relative_url }}"><img class="logo" src="/assets/images/Logo-positivo-transparente.png"/>
-            </a>
-        </h1>
-        <!--<h2 class='site-spiel'>
-            <a href="/projects">Open source</a> |
-            <a href="/publications">Research</a> |
-            <a href="/blog">Security</a>
-        </h2>-->
-    </div>
+<div class="header">
+  <div class="overlap-group14">
+    <a href="/" class="align-self-flex-start"><img class="logo-negro-negativo-3" src="/assets/img/logo-negro-negativo-3@2x.png" /> </a>
+    <a href="/about/"><div class="about roboto-normal-tuatara-17px">About</div></a>
+    <a href="/people/"><div class="people roboto-normal-tuatara-17px">People</div></a>
+    <a href="/projects/"><div class="projects roboto-normal-tuatara-17px">Projects</div></a>
+    <a href="/publications/"><div class="publications roboto-normal-tuatara-17px">Publications</div></a>
+    <a href="/talks-and-media/"><div class="talks-and-media roboto-normal-tuatara-17px">Talks and media</div></a>
+    <!-- <a href="/blog/"><div class="blog roboto-normal-tuatara-17px">Blog</div> </a> -->
   </div>
-    {%- if page_paths -%}
-  <div class='wrapper'>
-      <nav>
-        <div class='container-menu'>
-            <ul id='menu-default' class='menu'>
-                <li class='menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children'>
-                    <a class="page-link" href="/about/">About</a>
-                </li>
-               <li class='menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children'>
-                    <a class="page-link" href="/people/">People</a>
-                </li>
-               <li class='menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children'>
-                    <a class="page-link" href="/projects/">Projects</a>
-                </li>
-               <li class='menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children'>
-                    <a class="page-link" href="/publications/">Publications</a>
-                </li>
-               <li class='menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children'>
-                    <a class="page-link" href="/talks/">Talks and Media</a>
-                </li>
-               <li class='menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children'>
-                    <a class="page-link" href="/blog/">Blog</a>
-                </li>
-            </ul>
-        </div>
-      </nav>
-    {%- endif -%}
-  </div>
-  <div class="openresponsivemenu">
-    <div class='responsivemenu'>
-        
-        <input type="checkbox" id="toggle-1">
-        <label for='toggle-1'>
-<img class='responsive-drawer' src='/assets/images/drawer.png'/>
-</label>
-        <ul id='menu-default' class='menu'>
-            <li>
-                <a class="page-link" href="/about/">About</a>
-            </li>
-            <li>
-                <a class="page-link" href="/people/">People</a>
-            </li>
-           <li>
-                <a class="page-link" href="/projects/">Projects</a>
-            </li>
-           <li>
-                <a class="page-link" href="/publications/">Publications</a>
-            </li>
-           <li>
-                <a class="page-link" href="/talks/">Talks & Media</a>
-            </li>
-           <li>
-                <a class="page-link" href="/blog/">Blog</a>
-            </li>
-        </ul>
-      </div>
-    </div>
-
-</header>
+</div>
