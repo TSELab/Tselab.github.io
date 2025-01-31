@@ -28,3 +28,10 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "webrick", "~> 1.7"
 
 gem "rexml", "~> 3.2"
+
+gem 'csv'
+
+gem 'base64'
+
+gem 'bigdecimal'
+
