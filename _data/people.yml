@@ -15,8 +15,8 @@ students:
     - name: Chinenye Okafor
       photo: chinenye.jpg
       position: PhD Student
-      website: "" 
-      interests: "..."
+      website: "https://chinenyeokafor.github.io/" 
+      interests: "Software Supply Chain Security, Privacy"
     - name: Abhishek Reddypale 
       photo: placeholder.png
       title: PhD Student
