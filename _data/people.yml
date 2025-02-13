@@ -15,12 +15,12 @@ students:
     - name: Chinenye Okafor
       photo: chinenye.jpg
       position: PhD Student
-      website: "https://chinenyeokafor.github.io/" 
+      website: https://chinenyeokafor.github.io/
       interests: "Software Supply Chain Security, Privacy"
     - name: Abhishek Reddypalle
       photo: abhi.png
       position: PhD Student
-      website: "https://www.linkedin.com/in/abhishek-reddypalle/" 
+      website: https://www.linkedin.com/in/abhishek-reddypalle/
       interests: "Systems Security, Reproducible Builds, Software Bill of Materials"
 
 staff:
