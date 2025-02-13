@@ -6,3 +6,7 @@
   description: "Cryptographically-verifiable supply chain security framework. In-toto is a framework that allows actors within the software supply chain to communicate their actions in a cryptographically verifiable fashion. Through in-toto, software consumers are able to identify the actions performed in the supply chain and compare them against a policy provided by an authoritative source. This policy language and the evidence capture tooling is expressive enough to represent most software supply chains, and can detect attempts to tamper with the integrity of the chain itself."
   link: https://in-toto.io
   image: in-toto@2x.png
+- name: GUAC
+  description: "Graph for Understanding Artifact Composition (GUAC) gives you organized and actionable insights into your software supply chain security position. GUAC ingests software security metadata, like SBOMs, and maps out the relationship between software so that you can fully understand your software security position. Using GUAC, you can drive higher-level organizational outcomes such as audit, policy, risk management, and even developer assistance."
+  link: https://guac.sh
+  image: guac.png
