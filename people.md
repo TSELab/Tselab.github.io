@@ -41,7 +41,7 @@ permalink: /people/
                     <div class="name">{{ member.name }} </div>
                     <div class="people-position"> {{ member.position }} </div>
                     <div class="people-interests">Research Interests:<br />  {{ member.interests }}</div>
-                    <a href="https://badhomb.re/"> <div class="read-more-2">website</div></a>
+                    <a href="{{member.website}}"> <div class="read-more-2">website</div></a>
                   </div>
                   {% endfor %}
               </div>
