@@ -22,6 +22,11 @@ students:
       position: PhD Student
       website: https://www.linkedin.com/in/abhishek-reddypalle/
       interests: "Systems Security, Reproducible Builds, Software Bill of Materials"
+    - name: Zeren Li
+      photo: zeren.png
+      position: PhD Student
+      website: https://lizerengeorge.com/
+      interests: "Hardware & System Security, Side-channel Attacks"
 
 staff:
     - name: Santiago Lmaoorias
