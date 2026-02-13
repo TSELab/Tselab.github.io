@@ -41,7 +41,12 @@ students:
       photo: fabiha.jpg
       position: PhD Student
       website: ""
-      interests: "VLSI supply chain security"
+      interests: "VLSI and Industrial IoT Software supply chain security"
+    - name: Alexander Avilez Bahena
+      photo: alex.jpg
+      position: Master Student
+      website: ""
+      interests: "Software supply chain and embedded systems security"
 staff:
     - name: Santiago Lmaoorias
       photo: me.png
