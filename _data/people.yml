@@ -28,7 +28,7 @@ students:
       website: https://lizerengeorge.com/
       interests: "Hardware & System Security, Side-channel Attacks"
     - name: Ayushi Sharma
-      photo: ayushi.jpg
+      photo: ayushi.png
       position: PhD Student
       website: ""
       interests: "Safe Systems Programming (Rust), ML Security, Software Supply Chain Security"
@@ -38,7 +38,7 @@ students:
       website: ""
       interests: "Systems Security and Applied Cryptography"
     - name: Fabiha Hashmat
-      photo: fabiha.jpg
+      photo: Fabiha.jpg
       position: PhD Student
       website: ""
       interests: "VLSI and Industrial IoT Software supply chain security"
