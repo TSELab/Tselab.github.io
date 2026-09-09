@@ -47,6 +47,12 @@ students:
       position: Master Student
       website: ""
       interests: "Software supply chain and embedded systems security"
+    - name: Yongjae Chung
+      photo: yongjae.jpg
+      position: PhD Student
+      website: https://www.linkedin.com/in/yongjae-chung/
+      interests: "Software Supply Chain Security, AI/ML Security, Systems Security"
+
 staff:
     - name: Santiago Lmaoorias
       photo: me.png
