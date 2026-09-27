@@ -425,16 +425,22 @@
 }
 
 .tslab .home-card{
+  position: relative;
   background-image: url(../img/memorialmall@1x.png);
-  background-size: 100% 100%;
+  background-size: cover;
   left: 0;
   width: 100%;
-  height:100%;
+  min-height:100vh;
+  padding: 299px 8% 80px 20%;
 }
 
 .tslab .home-transparency{
-  margin-top: 60px;
+  position: absolute;
+  inset: 0;
+  width: 100%;
   height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .tslab .text-25 {
@@ -442,12 +448,12 @@
   font-family: var(--font-family-roboto);
   font-size: var(--font-size-xl);
   font-weight: 400;
-  left: 416px;
   letter-spacing: 0;
   line-height: 35px;
-  position: absolute;
-  top: 519px;
-  width: 687px;
+  position: relative;
+  width: 100%;
+  max-width: 712px;
+  margin-top: 32px;
 }
 
 .tslab .text-26 {
@@ -455,12 +461,11 @@
   font-family: var(--font-family-roboto);
   font-size: var(--font-size-xxxl);
   font-weight: 500;
-  left: 416px;
   letter-spacing: 0;
   line-height: 45px;
-  position: absolute;
-  top: 299px;
-  width: 712px;
+  position: relative;
+  width: 100%;
+  max-width: 712px;
 }
 
 .tslab .container-about{
