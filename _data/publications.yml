@@ -1,14 +1,78 @@
 conference:
-    - title: "Sigstore: software signing for everybody"
-      info: "Z. Newman, JS. Meyers, S. Torres-Arias. Proceedings of the 2022 ACM SIGSAC Conference on Computer and Communications Security (CCS '22) Los Angeles, CA, 2022."
-    - title: "in-toto: providing farm-to-table security guarantees for bits and bytes."
-      info:  "S. Torres-Arias, H. Afzali, T. K. Kuppusamy, R. Curtmola, J. Cappos. 28th USENIX Security Symposium (USENIX Security ‘19) Santa Clara, CA 2019."
+  - title: "DebTrace: Tracing, Verifying, and Revisiting a Decade of Debian Reproducibility"
+    info: "A. Reddypalle, W. Boulton, S. Brunswicker, S. Torres-Arias. IEEE International Conference on Software Maintenance and Evolution (ICSME '26), Benevento, Italy, 2026."
+    year: 2026
+    url: "https://conf.researchr.org/details/icsme-2026/icsme-2026-papers/5/DebTrace-Tracing-Verifying-and-Revisiting-a-Decade-of-Debian-Reproducibility"
+    award: "Distinguished Paper Award"
 
+  - title: "Context-Aware Trust Verification for Identity-Based Software Signing"
+    info: "C. Okafor, J. C. Davis, S. Torres-Arias. IEEE/ACM International Conference on Automated Software Engineering (ASE '26), Munich, Germany, 2026."
+    year: 2026
+    url: "https://conf.researchr.org/details/ase-2026/ase-2026-research-track/3/Context-Aware-Trust-Verification-for-Identity-Based-Software-Signing"
+    pdf: "https://arxiv.org/pdf/2406.15596"
+    pdf_label: "pdf (preprint)"
+    source: "https://conf.researchr.org/details/ase-2026/ase-2026-research-track/3/Context-Aware-Trust-Verification-for-Identity-Based-Software-Signing"
 
-journal:
-    - title: "in-toto: providing farm-to-table security guarantees for bits and bytes."
-      info:  "S. Torres-Arias, H. Afzali, T. K. Kuppusamy, R. Curtmola, J. Cappos. 28th USENIX Security Symposium (USENIX Security ‘19) Santa Clara, CA 2019."
+  - title: "SoK: A Defense-Oriented Evaluation of Software Supply Chain Security"
+    info: "E. Abu Ishgair, J. Gomez, M. S. Melara, A. Cardenas, S. Torres-Arias. IEEE European Symposium on Security and Privacy (EuroS&P), pp. 836–859, 2026."
+    year: 2026
+    url: "https://doi.org/10.1109/eurosp68448.2026.00059"
+    pdf: "/assets/papers/sok-defense-oriented-software-supply-chain-security.pdf"
+
+  - title: "Trustworthy and Confidential SBOM Exchange"
+    info: "E. Abu Ishgair, C. Okafor, M. S. Melara, S. Torres-Arias. 35th USENIX Security Symposium, pp. 6859–6878, 2026."
+    year: 2026
+    url: "https://www.usenix.org/conference/usenixsecurity26/presentation/abu-ishgair"
+    pdf: "https://www.usenix.org/system/files/usenixsecurity26-abu-ishgair.pdf"
+
+  - title: "Sigstore: software signing for everybody"
+    info: "Z. Newman, JS. Meyers, S. Torres-Arias. Proceedings of the 2022 ACM SIGSAC Conference on Computer and Communications Security (CCS '22) Los Angeles, CA, 2022."
+    year: 2022
+    url: "https://doi.org/10.1145/3548606.3560596"
+    pdf: "https://dl.acm.org/doi/pdf/10.1145/3548606.3560596"
+
+  - title: "in-toto: providing farm-to-table security guarantees for bits and bytes."
+    info: "S. Torres-Arias, H. Afzali, T. K. Kuppusamy, R. Curtmola, J. Cappos. 28th USENIX Security Symposium (USENIX Security ‘19) Santa Clara, CA 2019."
+    year: 2019
+    url: "https://www.usenix.org/conference/usenixsecurity19/presentation/torres-arias"
+    pdf: "https://www.usenix.org/system/files/sec19-torres-arias.pdf"
+
+journal: []
 
 other:
-    - title: "in-toto: providing farm-to-table security guarantees for bits and bytes."
-      info:  "S. Torres-Arias, H. Afzali, T. K. Kuppusamy, R. Curtmola, J. Cappos. 28th USENIX Security Symposium (USENIX Security ‘19) Santa Clara, CA 2019."
+  - title: "A Viewpoint on Software Supply Chain Security: Are We Getting Lost in Translation?"
+    info: "M. S. Melara, S. Torres-Arias. IEEE Security & Privacy 21(6), pp. 55–58, 2023."
+    year: 2023
+    url: "https://doi.org/10.1109/MSEC.2023.3316568"
+
+report:
+  - title: "Strategies for the Integration of Software Supply Chain Security in DevSecOps CI/CD Pipelines"
+    info: "R. Chandramouli, F. Kautz, S. Torres-Arias. NIST Special Publication 800-204D, 2024."
+    year: 2024
+    url: "https://csrc.nist.gov/pubs/sp/800/204/d/final"
+    pdf: "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204D.pdf"
+
+preprint:
+  - title: "Landseer: Exploring the Machine Learning Defense Landscape"
+    info: "A. Sharma, R. Agbozo, S. Torres-Arias, Z. Ghodsi. arXiv:2605.27148, preprint, 2026."
+    year: 2026
+    url: "https://arxiv.org/abs/2605.27148"
+    pdf: "https://arxiv.org/pdf/2605.27148"
+
+  - title: "Panic! At The Distro: A Study of Malware Prevention in Linux Distributions"
+    info: "D.-L. Vu, T. Dunlap, K. Obermeier-Velazquez, T.-C. Nguyen, P. Gibert, J. S. Meyers, S. Torres-Arias. SSRN, preprint, 2026."
+    year: 2026
+    url: "https://arxiv.org/pdf/2411.11017"
+    pdf: "/assets/papers/panic-at-the-distro.pdf"
+
+  - title: "Privocracy: Online Democracy through Private Voting"
+    info: "P. Camponês, H. Pereira, A. Persaud, K. Gallagher, S. Torres-Arias. arXiv:2602.01341, preprint, 2026."
+    year: 2026
+    url: "https://arxiv.org/abs/2602.01341"
+    pdf: "https://arxiv.org/pdf/2602.01341"
+
+  - title: "Software Dark Matter: Gazing at Uncharted Files to Navigate SBOM Integrations"
+    info: "A. Reddypalle, D. Roellke, S. Torres-Arias. arXiv:2606.13966, preprint, 2026."
+    year: 2026
+    url: "https://arxiv.org/abs/2606.13966"
+    pdf: "https://arxiv.org/pdf/2606.13966"
